@@ -7,6 +7,26 @@
 
         <title>@yield('title')</title>
 
+        <!--DataTables -->
+
+        <script src="https://datatables.yajrabox.com/js/jquery.min.js"></script>
+        <script src="https://datatables.yajrabox.com/js/bootstrap.min.js"></script>
+        <script src="https://datatables.yajrabox.com/js/jquery.dataTables.min.js"></script>
+        <script src="https://datatables.yajrabox.com/js/datatables.bootstrap.js"></script>
+        <script src="https://datatables.yajrabox.com/js/handlebars.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/mark.js/8.0.0/jquery.mark.min.js"></script>
+        <link href="https://datatables.yajrabox.com/css/app.css" rel="stylesheet">
+        <link href="https://datatables.yajrabox.com/css/demo.css" rel="stylesheet">
+        <link href="https://datatables.yajrabox.com/css/datatables.bootstrap.css" rel="stylesheet">
+        <link href='https://fonts.googleapis.com/css?family=Lato:400,700,300|Open+Sans:400,600,700,800' rel='stylesheet'
+        type='text/css'>
+        <link href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css' rel='stylesheet'
+        type='text/css'>
+        <link rel="stylesheet" href="https://datatables.yajrabox.com/highlight/styles/zenburn.css">
+        <script src="https://datatables.yajrabox.com/highlight/highlight.pack.js"></script>
+        <script>hljs.initHighlightingOnLoad();</script>
+
+
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
@@ -22,7 +42,7 @@
             }
 
             .full-height {
-                height: 100vh;
+              <!-- height: 100vh; -->
             }
 
             .flex-center {
@@ -92,5 +112,7 @@
                 </div>
             </div>
         </div>
+        @section('main')
+        @show
     </body>
 </html>
