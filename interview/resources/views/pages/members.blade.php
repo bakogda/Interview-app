@@ -1,8 +1,7 @@
 @extends('layout.app')
 
-@section('title','Welcome')
+@section('title','Members')
 
 @section('body')
-
-Welcome
+Members
 @endsection

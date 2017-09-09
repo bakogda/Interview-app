@@ -14,3 +14,18 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('/members', function()
+{
+    return view('pages.members');
+});
+
+Route::get('/addmember', function()
+{
+    return view('pages.addmember');
+});
+
+Route::get('/memberships', function()
+{
+    return view('pages.memberships');
+});
