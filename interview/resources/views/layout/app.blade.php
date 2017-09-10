@@ -125,7 +125,7 @@
                 <div class="links">
                     <a href="http://127.0.0.1:8000/">Welcome</a>
                     <a href="http://127.0.0.1:8000/members">Members</a>
-                    <a href="http://127.0.0.1:8000/memberships">Memberships</a>
+                    <a href="http://127.0.0.1:8000/mpages/create">Memberships</a>
                     <a href="http://127.0.0.1:8000/pages/create">Add Member</a>
                     <a href="https://github.com/laravel/laravel">Income</a>
                 </div>

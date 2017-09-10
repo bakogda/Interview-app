@@ -87,4 +87,24 @@ $('#members-past').DataTable({
 });
 </script>
 
+<div class="row-form">
+    <div class="col-md-4 col-md-offset-4">
+      <h2>Update membership</h2>
+
+      {!! Form::open(array('route' => 'mpages.store')) !!}
+      {{ Form::label('member_id', 'Member ID:')}}
+      {{ Form::text('member_id', null, array('class' => 'form-control'))}}
+      {{ Form::label('type', 'Membership type') }}<br>
+      {{ Form::radio('visible', '2') }} Monthly<br>
+      {{ Form::radio('visible', '1') }} Weekly<br>
+      {{ Form::radio('visible', '0') }} Day<br>
+      {{ Form::radio('visible', '3')}} Choose Date<br>
+      {{ Form::label('membership_date', 'Choose Date:')}}
+      {{ Form::text('membership_date', null, array('class' => 'form-control'))}}
+
+      {{ Form::Submit('Update membership', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top:20px;'))}}
+{!! Form::close() !!}
+</div>
+</div>
+
 @endsection

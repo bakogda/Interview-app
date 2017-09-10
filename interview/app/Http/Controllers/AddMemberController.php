@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 use App\Members;
+use App\Membership;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Requests;
@@ -42,7 +43,8 @@ class AddMemberController extends Controller
         'first_name' => 'required',
         'last_name' => 'required',
         'dob' => 'required',
-        'email' => 'required'
+        'email' => 'required',
+        'membership_date' => 'required'
       ));
       $member = new Members;
       $member->member_id = $request->member_id;
@@ -51,7 +53,12 @@ class AddMemberController extends Controller
       $member->dob = $request->dob;
       $member->email = $request->email;
       $member->save();
-      return redirect('members');
+
+      $membership = new Membership;
+      $membership->membership_id = $request->member_id;
+      $membership->membership_date = $request->membership_date;
+      $membership->save();
+            return redirect('members');
   }
 
 

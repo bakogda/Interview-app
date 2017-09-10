@@ -26,6 +26,9 @@ Add Member
 
       {{ Form::label('email', 'Email:')}}
       {{ Form::text('email', null, array('class' => 'form-control'))}}
+
+      {{ Form::label('membership_date', 'Membership until:')}}
+      {{ Form::text('membership_date', null, array('class' => 'form-control'))}}
       {{ Form::Submit('Create member', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top:20px;'))}}
 {!! Form::close() !!}
 </div>

@@ -8,9 +8,4 @@ class Members extends Model
 {
     protected $table = 'members';
     public $primaryKey = 'id';
-
-    public function memberships()
-    {
-      return this->hasOne(Membership::class);
-    }
 }
