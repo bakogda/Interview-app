@@ -11,7 +11,6 @@ Members
 <table id="members-table" class="table">
   <thead>
   <tr>
-        <td>ID</td>
         <td>Members ID</td>
         <td>First Name</td>
         <td>Last Name</td>
@@ -30,7 +29,6 @@ $('#members-table').DataTable({
  serverSide: true,
  ajax: 'http://127.0.0.1:8000/members/get_datatable',
  columns: [
-     {data: 'id', name: 'id'},
      {data: 'member_id', name: 'member_id'},
      {data: 'first_name', name: 'first_name'},
      {data: 'last_name', name: 'last_name'},
@@ -51,7 +49,5 @@ $('#members-table').DataTable({
  }
 });
 </script>
-
-
 
 @endsection

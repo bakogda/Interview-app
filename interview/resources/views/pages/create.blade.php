@@ -8,7 +8,7 @@ Add Member
 
 @section('main')
 
-<div class="row">
+<div class="row-form">
     <div class="col-md-4 col-md-offset-4">
 
       {!! Form::open(array('route' => 'pages.store')) !!}
@@ -18,11 +18,11 @@ Add Member
       {{ Form::label('first_name', 'First Name:')}}
       {{ Form::text('first_name', null, array('class' => 'form-control'))}}
 
-      {{ Form::label('last_name', 'First Name:')}}
+      {{ Form::label('last_name', 'Last Name:')}}
       {{ Form::text('last_name', null, array('class' => 'form-control'))}}
 
       {{ Form::label('dob', 'Date of birth:')}}
-      {{ Form::text('dob', '19/04/1994', array('class' => 'form-control'))}}
+      {{ Form::text('dob', 'eg. 1994/04/19', array('class' => 'form-control'))}}
 
       {{ Form::label('email', 'Email:')}}
       {{ Form::text('email', null, array('class' => 'form-control'))}}

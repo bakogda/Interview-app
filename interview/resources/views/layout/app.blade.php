@@ -69,6 +69,13 @@
                 font-size: 84px;
             }
 
+            .h2
+            {
+                font-size: 30px;
+                text-align: center;
+                margin-bottom: 1%;
+            }
+
             .links > a {
                 color: #636b6f;
                 padding: 0 25px;
@@ -82,6 +89,18 @@
             .m-b-md {
                 margin-bottom: 30px;
             }
+
+            .row-form
+            {
+              margin-top: 4%;
+            }
+
+            .table-past
+            {
+              margin-top: 4%;
+              margin-bottom: 4%;
+            }
+
         </style>
     </head>
     <body>
