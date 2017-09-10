@@ -17,12 +17,7 @@ Route::get('/', function () {
 
 Route::get('/members', 'MembersController@index');
 Route::get('/members/get_datatable', 'MembersController@get_datatable');
-
-Route::get('/addmember', function()
-{
-    return view('pages.addmember');
-});
-
+Route::resource('pages','AddMemberController');
 Route::get('/memberships', function()
 {
     return view('pages.memberships');
