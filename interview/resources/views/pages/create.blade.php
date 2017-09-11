@@ -31,6 +31,14 @@ Add Member
       {{ Form::text('membership_date', null, array('class' => 'form-control'))}}
       {{ Form::Submit('Create member', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top:20px;'))}}
 {!! Form::close() !!}
+
+@if ($errors->any())
+  <ul class="alert alert danger">
+    @foreach ($errors->all() as $error)
+        <li>{{ $error }}</li>
+    @endforeach
+  </ul>
+  @endif
 </div>
 </div>
 @endsection

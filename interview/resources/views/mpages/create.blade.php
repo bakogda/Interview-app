@@ -10,7 +10,7 @@ Memberships
 <div class="col-md-8 col-md-offset-2">
 <div class="table-past">
   <h2> Members with valid membership</h2>
-<table id="members-table" class="table-current">
+<table id="members-table" class="table">
   <thead>
   <tr>
         <td>Members ID</td>
@@ -21,6 +21,7 @@ Memberships
 </thead>
 
 </table>
+
 </div>
 
 <script type="text/javascript">
@@ -29,9 +30,9 @@ $('#members-table').DataTable({
  serverSide: true,
  ajax: 'http://127.0.0.1:8000/memberships/get_datatables',
  columns: [
-     {data: 'member_id', name: 'member_id'},
-     {data: 'first_name', name: 'first_name'},
-     {data: 'last_name', name: 'last_name'},
+     {data: 'member_id', name: 'membership_id'},
+     {data: 'first_name', name: 'members.first_name'},
+     {data: 'last_name', name: 'members.last_name'},
      {data: 'membership_date', name: 'membership_date'}
  ],
  initComplete: function () {
@@ -46,6 +47,8 @@ $('#members-table').DataTable({
  }
 });
 </script>
+
+
 
 <h2> Members with invalid membership</h2>
 <table id="members-past" class="table">
@@ -69,11 +72,11 @@ $('#members-past').DataTable({
  serverSide: true,
  ajax: 'http://127.0.0.1:8000/memberships/get_pastdata',
  columns: [
-     {data: 'member_id', name: 'member_id'},
-     {data: 'first_name', name: 'first_name'},
-     {data: 'last_name', name: 'last_name'},
-     {data: 'membership_date', name: 'membership_date'}
- ],
+   {data: 'member_id', name: 'membership_id'},
+   {data: 'first_name', name: 'members.first_name'},
+   {data: 'last_name', name: 'members.last_name'},
+   {data: 'membership_date', name: 'membership_date'}
+],
  initComplete: function () {
      this.api().columns().every(function () {
          var column = this;
@@ -95,7 +98,7 @@ $('#members-past').DataTable({
       {{ Form::label('member_id', 'Member ID:')}}
       {{ Form::text('member_id', null, array('class' => 'form-control'))}}
       {{ Form::label('type', 'Membership type') }}<br>
-      {{ Form::radio('visible', '2') }} Monthly<br>
+      {{ Form::radio('visible', '2', true) }} Monthly<br>
       {{ Form::radio('visible', '1') }} Weekly<br>
       {{ Form::radio('visible', '0') }} Day<br>
       {{ Form::radio('visible', '3')}} Choose Date<br>
@@ -104,6 +107,14 @@ $('#members-past').DataTable({
 
       {{ Form::Submit('Update membership', array('class' => 'btn btn-success btn-lg btn-block', 'style' => 'margin-top:20px;'))}}
 {!! Form::close() !!}
+
+    @if ($errors->any())
+      <ul class="alert alert danger">
+        @foreach ($errors->all() as $error)
+            <li>{{ $error }}</li>
+        @endforeach
+      </ul>
+      @endif
 </div>
 </div>
 

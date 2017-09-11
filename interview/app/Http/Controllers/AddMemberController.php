@@ -39,10 +39,10 @@ class AddMemberController extends Controller
     public function store(Request $request)
     {
       $this->validate($request, array(
-        'member_id' => 'required',
+        'member_id' => 'required|unique:members,member_id',
         'first_name' => 'required',
         'last_name' => 'required',
-        'dob' => 'required',
+        'dob' => 'required|date|date_format:Y/m/d',
         'email' => 'required',
         'membership_date' => 'required'
       ));

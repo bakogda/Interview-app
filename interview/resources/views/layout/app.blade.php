@@ -24,7 +24,6 @@
         type='text/css'>
         <link rel="stylesheet" href="https://datatables.yajrabox.com/highlight/styles/zenburn.css">
         <script src="https://datatables.yajrabox.com/highlight/highlight.pack.js"></script>
-        <script>hljs.initHighlightingOnLoad();</script>
 
 
         <!-- Fonts -->
@@ -127,7 +126,6 @@
                     <a href="http://127.0.0.1:8000/members">Members</a>
                     <a href="http://127.0.0.1:8000/mpages/create">Memberships</a>
                     <a href="http://127.0.0.1:8000/pages/create">Add Member</a>
-                    <a href="https://github.com/laravel/laravel">Income</a>
                 </div>
             </div>
         </div>

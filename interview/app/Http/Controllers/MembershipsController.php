@@ -36,6 +36,11 @@ class MembershipsController extends Controller
      */
     public function store(Request $request)
     {
+      $this->validate($request, array(
+        'member_id' => 'required',
+        'membership_date' => 'required|date|date_format:Y/m/d'
+      ));
+
         $membershipidentifier = $request->member_id;
         $type = $request->visible;
         $cdate = $request->membership_date;
