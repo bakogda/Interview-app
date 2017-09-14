@@ -33,7 +33,7 @@
         <style>
             html, body {
                 background-color: #fff;
-                color: #636b6f;
+                color: #000;
                 font-family: 'Raleway', sans-serif;
                 font-weight: 100;
                 height: 100vh;
@@ -99,6 +99,14 @@
               margin-top: 4%;
               margin-bottom: 4%;
             }
+
+            div.dataTables_wrapper {
+              padding: 10px 0;
+              border-left: 1px solid #000;
+              border-right: 1px solid #000;
+              border-bottom: 1px solid #000;
+              text-decoration-color: #000;
+          }
 
         </style>
     </head>
