@@ -36,13 +36,20 @@ class MembershipsController extends Controller
      */
     public function store(Request $request)
     {
+      $type = $request->visible;
+      if($type === '3')
+      {
       $this->validate($request, array(
         'member_id' => 'required',
         'membership_date' => 'required|date|date_format:Y/m/d'
       ));
-
+    }
+    else {
+      $this->validate($request, array(
+        'member_id' => 'required'
+      ));
+    }
         $membershipidentifier = $request->member_id;
-        $type = $request->visible;
         $cdate = $request->membership_date;
 
         $books = Membership::where('membership_id',$membershipidentifier)->get();
